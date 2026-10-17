@@ -1,0 +1,6 @@
+Tamoveer PWA - deploy notes
+1. Upload this whole folder to any HTTPS static host (Firebase Hosting: `firebase deploy --only hosting`, Netlify, GitHub Pages, Cloudflare Pages).
+2. Open the https URL once while online. The service worker caches the game; after that it launches offline.
+3. Android Chrome: menu > Install app (or the in-game INSTALL APP button). iPhone Safari: Share > Add to Home Screen.
+4. To ship an update: change VERSION in sw.js (e.g. tamoveer-v2.1.1) and redeploy. Players get it on next launch.
+Opening index.html directly from a file works for playing, but install and offline caching need https (or localhost).
